@@ -1,166 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FarmLink1.O - Bid and Deliver</title>
-  <link rel="stylesheet" href="fm2.css">
-</head>
-<body>
-    
-        
-    <header class="navbar">
-        <h1 class="logo">FarmLink</h1>
-        <h2>Welcome to FarmLink</h2>
-        <p>Empowering Farmers with Technology to sell Smarter.</p>
-        <button class="cta-button" onclick="exploreCategories()">Explore Categories</button>
-      </section>
-        <nav>
-          <ul class="nav-links">
-            <li><button><a href="farmlnk.html">Home</a></button>
-            <button><a href="#categories">Categories</a></button>
-            <button><a href="#bidding">Live Bidding</a></button>
-            <button><a href="#profile">Profile</a></button>
-            <button><a href="log.html">Log in</a></button>
-              </li>
-          </ul>
-        </nav>
-      </header>
-    
-      
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+  }
   
-  </header>
-
-  <section id="categories">
-    <h2>Categories</h2>
-    <div id="category-grid" class="scroll-dots"></div>
-  </section>
-  <section id="market" class="market-section">
-    <h2>Today's Market</h2>
-    <div id="market-prices" class="scroll-dots">
-        
-    </div>
-  </section>
-
-  <section class="scroll bidding-section">
-    <h2>Market Today Live Buyer</h2>
-    <div id="bidding-area" class="scroll-dots"></div>
-    <h3>Search buyer in your area</h3>
-    <div class="bidders-controls">
-        <input type="text" id="filter-location" placeholder="Filter by location" />
-        <button onclick="applyFilter()">Apply Filter</button>
-      </div>
-    <hr>
-    <table id="bidder-info">
-        <thead>
-          <tr>
-            <th>Location</th>
-            <th>Bidder</th>
-            <th>Bid Amount</th>
-            <th>Product</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Dynamic Content -->
-        </tbody>
-      </table>
-    </section>
-
-
-
-    <section id="sellers">
-        <h2>sellers today</h2>
-        <div id="category-grid" class="scroll-dots">
-      
-          <h3>Seller 1</h3>
-          <div class="portfolio" id="portfolio1">
-            <p>Seller 1</p>
-            <div class="container">
-              <!-- Header Section -->
-              <header class="buyer-header">
-                <img src="c:\Users\ADMN\Pictures\Saved Pictures\coursera\bll.jpg" alt="Buyer Photo" class="buyer-photo">
-                <h1 class="buyer-name">Bill Mbiru</h1>
-                <button class="submit">View Portfolio</button>
-
-
+  header {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    position: sticky;
+  }
   
-              </header>
-            </div>
-
-
-
-      
-          <div class="portfolio" id="portfolio2">
-            <p>GTI</p>
-            <div class="container">
-              <!-- Header Section -->
-              <header class="buyer-header">
-                <img src="c:\Users\ADMN\Pictures\Saved Pictures\coursera\bll.jpg" alt="Buyer Photo" class="buyer-photo">
-                <h1 class="buyer-name">Bill Mbiru</h1>
-                <button class="submit">View Portfolio</button>
-
-              </header>
-            </div>
-      
-        <!-- Portfolio Sections -->
-        
-      
-        <div class="portfolio" id="portfolio3">
-          <p>Seller 3</p>
-          <div class="container">
-            <!-- Header Section -->
-            <header class="buyer-header">
-              <img src="c:\Users\ADMN\Pictures\Saved Pictures\coursera\bll.jpg" alt="Buyer Photo" class="buyer-photo">
-              <h1 class="buyer-name">Bill Mbiru</h1>
-              <button class="submit" onclick="viewPortfolio('portfolio1')">View Portfolio</button>
-
-
-            </header>
-        </div>
-      </div>
-    </section>    
-    <section id="transport-section">
-      
-    <h3>Transport Options</h3>
-    <hr>
-    <div class="transport-search">
-        <input type="text" placeholder="Search transport" class="transport-input">
-        <button class="transport-btn">Search</button>
-    </div>
-    <div id="transport-options" class="scroll-content">
-    </div>
-  </section>
-  <section class="advertisement-clips">
-    <h2>How FarmLink Works</h2>
-    <div class="scrollable-clips">
-        <div class="clip-item">Clip 1: How Bidding Works</div>
-        <div class="clip-item">Clip 2: Transport Services Explained</div>
-        <div class="clip-item">Clip 3: Connecting Farmers</div>
-        <!-- Add more clips as needed -->
-    </div>
-    <div class="dots-indicator">
-
-  <footer>
-    <button class="nav-btn buy-btn">Buy</button>
-    <button class="nav-btn sell-btn">Sell</button>
-    <footer class="footer">
-        <div class="footer-content">
-          
-          <ul class="footer-list">
-            <li><button>FAQ</button>
-            <button>Email</button>
-            <button><a href="farmlnk.html">Home</button></li>
-          </ul>
-          <div class="footer-info">
-            <p>Company Details: contact@farmink.com | +254 712 345 678</p>
-            <p>&copy; 2024 Project T. All Rights Reserved.</p>
-          </div>
-          
-        </div>
-    
-    </div>
-    
-  </footer>
-  <script src="farmlnk.js"></script>
-</body>
-</html>
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .nav-links button a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .nav-links button {
+    background: #264653;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin: 0.2rem;
+    cursor: pointer;
+  }
+  
+  .nav-links button:hover {
+    background: #1d3557;
+  }
+  
+  .cta-button {
+    background: #e76f51;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background: #d62a1e;
+  }
+  
+  /* Section Styling */
+  .market-section,
+  .sellers-section,
+  .bidding-section,
+  .transport-section {
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2, h3 {
+    color: #264653;
+    margin-bottom: 1rem;
+  }
+  
+  /* Scrollable Section */
+  .scroll-dots,
+  .scroll-content {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    scrollbar-width: none; /* For Firefox */
+  }
+  
+  .scroll-dots::-webkit-scrollbar,
+  .scroll-content::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
+  }
+  
+  .category-card {
+    min-width: 150px;
+    height: 150px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .category-card:hover {
+    transform: scale(1.2);
+  }
+  
+  .category-card:hover {
+    background-color: #21867a;
+  }
+  
+  /* Bidders Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #264653;
+    color: white;
+  }
+  
+  .tooltip {
+    visibility: hidden;
+    background-color: #264653;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  td.bidder:hover .tooltip {
+    visibility: visible;
+  }
+  
+  td.location {
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }
+  .buyer-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 0.5%;
+  }
+  
+  .buyer-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .buyer-name {
+    font-size: 2em;
+    color: #333;
+  }
+  /* Footer */
+  footer {
+    background-color: #264653;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .footer-list button {
+    background: #2a9d8f;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .footer-list button:hover {
+    background: #21867a;
+  }
+  
